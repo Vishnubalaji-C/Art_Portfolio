@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Art Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Login</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('gallery') }}">Gallery</a>
+            <a href="{{ url_for('help') }}">Help & Support</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="login-section">
+            <h2>Log In to Your Account</h2>
+            <p>Please enter your username and password to log in to your Art Portfolio account. If you don't have an account, you can <a href="{{ url_for('register') }}">register here</a>.</p>
+            <form method="post" action="{{ url_for('login') }}">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p><a href="{{ url_for('password_reset') }}">Forgot your password?</a></p>
+        </section>
+        <section id="additional-info">
+            <h2>Why Create an Account?</h2>
+            <ul>
+                <li>Access exclusive content and features.</li>
+                <li>Upload and manage your own artwork.</li>
+                <li>Connect with other artists and art enthusiasts.</li>
+                <li>Receive updates and notifications about new artwork and events.</li>
+            </ul>
+        </section>
+        <section id="help-section">
+            <h2>Need Help?</h2>
+            <p>If you are experiencing issues with logging in or need assistance, please visit our <a href="{{ url_for('help') }}">Help & Support</a> page or contact our support team at <a href="mailto:support@artportfolio.com">support@artportfolio.com</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Art Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

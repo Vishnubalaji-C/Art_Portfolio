@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Art Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('gallery') }}">Gallery</a>
+            <a href="{{ url_for('help') }}">Help & Support</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Get in Touch</h2>
+        <p>If you have any questions, comments, or feedback, please feel free to reach out to us using the contact form below or through our contact information.</p>
+
+        <h2>Contact Form</h2>
+        <form method="post" action="{{ url_for('contact') }}">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <h2>Contact Information</h2>
+        <p>Email: <a href="mailto:support@artportfolio.com">support@artportfolio.com</a></p>
+        <p>Phone: +919876543210</p>
+        <p>Address: 123 Art Street, Creativity City, India</p>
+
+        <h2>Find Us on the Map</h2>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354349245966!2d-122.42037638468182!3d37.77675797975824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808fb835631b%3A0x8c033f596be56a29!2sArt+Street%2C+San+Francisco%2C+CA+94103%2C+USA!5e0!3m2!1sen!2sin!4v1616566295120!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <h2>Follow Us on Social Media</h2>
+        <p>Stay connected and follow us on social media:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/artportfolio" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com/artportfolio" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com/artportfolio" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/artportfolio" target="_blank">LinkedIn</a></li>
+        </ul>
+    </main>
+    <footer>
+        <p>&copy; 2025 Art Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

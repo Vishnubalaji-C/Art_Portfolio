@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Art Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('gallery') }}">Gallery</a>
+            <a href="{{ url_for('help') }}">Help & Support</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Our Art Collection</h2>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search for artwork...">
+            <button onclick="searchArtwork()">Search</button>
+        </div>
+        <div id="art-gallery">
+            <div class="artwork">
+                <h4>Sunset Dreams</h4>
+                <img src="{{ url_for('static', filename='images/sunset_dreams.jpg') }}" alt="Sunset Dreams">
+                <p>A mesmerizing blend of warm hues capturing the serenity of a sunset over a tranquil lake.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Urban Reflections</h4>
+                <img src="{{ url_for('static', filename='images/urban_reflections.jpg') }}" alt="Urban Reflections">
+                <p>A thought-provoking abstract piece showcasing the beauty of city life through reflective tones.</p>
+            </div>
+            <div class="artwork">
+                <h4>Whispering Meadows</h4>
+                <img src="{{ url_for('static', filename='images/whispering_meadows.jpg') }}" alt="Whispering Meadows">
+                <p>A dreamy landscape capturing the lush green fields swaying under the golden rays of dawn.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Ethereal Waves</h4>
+                <img src="{{ url_for('static', filename='images/ethereal_waves.jpg') }}" alt="Ethereal Waves">
+                <p>A hypnotic dance of ocean waves in celestial hues, reflecting the vast mysteries of the sea.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Celestial Bloom</h4>
+                <img src="{{ url_for('static', filename='images/celestial_bloom.jpg') }}" alt="Celestial Bloom">
+                <p>A surreal floral masterpiece, blending cosmic elements with the delicate beauty of nature.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Echoes of the Past</h4>
+                <img src="{{ url_for('static', filename='images/echoes_past.jpg') }}" alt="Echoes of the Past">
+                <p>An abstract portrayal of forgotten memories, captured through bold textures and deep contrasts.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Twilight Serenity</h4>
+                <img src="{{ url_for('static', filename='images/twilight_serenity.jpg') }}" alt="Twilight Serenity">
+                <p>A soft and calming depiction of twilight, where the last golden light kisses the horizon.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Rhythms of the Wild</h4>
+                <img src="{{ url_for('static', filename='images/rhythms_wild.jpg') }}" alt="Rhythms of the Wild">
+                <p>A vibrant explosion of wildlife and motion, celebrating the untamed energy of nature.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Neon Metropolis</h4>
+                <img src="{{ url_for('static', filename='images/neon_metropolis.jpg') }}" alt="Neon Metropolis">
+                <p>A futuristic vision of a city glowing in neon lights, capturing the pulse of modern urban life.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Silent Whispers</h4>
+                <img src="{{ url_for('static', filename='images/silent_whispers.jpg') }}" alt="Silent Whispers">
+                <p>A hauntingly beautiful representation of solitude, where the shadows tell stories untold.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Golden Horizon</h4>
+                <img src="{{ url_for('static', filename='images/golden_horizon.jpg') }}" alt="Golden Horizon">
+                <p>A stunning panoramic view of rolling hills bathed in the soft glow of the setting sun.</p>
+            </div>
+            
+            <div class="artwork">
+                <h4>Moonlit Mirage</h4>
+                <img src="{{ url_for('static', filename='images/moonlit_mirage.jpg') }}" alt="Moonlit Mirage">
+                <p>A magical nightscape where moonlight dances on the water, blurring the line between dreams and reality.</p>
+            </div>
+            
+            
+            <!-- Add more artworks as needed -->
+        </div>
+        <div id="rating-comment-section">
+            <h3>Rate and Comment on Artwork</h3>
+            <form id="rating-form">
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+                <br>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment" rows="4" required></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="comments-section">
+                <!-- Display user comments here -->
+            </div>
+        </div>
+    </main>    
+    <footer>
+        <p>&copy; 2025 Art Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

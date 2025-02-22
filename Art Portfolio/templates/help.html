@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - Art Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Help & Support</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('gallery') }}">Gallery</a>
+            <a href="{{ url_for('help') }}">Help & Support</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>How do I create an account?</h3>
+            <p>To create an account, click on the "Register" link in the navigation menu, fill out the required information, and submit the form.</p>
+        </div>
+        <div class="faq">
+            <h3>How do I reset my password?</h3>
+            <p>If you've forgotten your password, click on the "Login" link in the navigation menu and then select "Forgot Password." Follow the instructions to reset your password.</p>
+        </div>
+        <div class="faq">
+            <h3>How can I contact support?</h3>
+            <p>You can contact our support team by sending an email to support@artportfolio.com or by calling +123-456-7890.</p>
+        </div>
+
+        <h2>Contact Information</h2>
+        <p>If you have any questions or need further assistance, please feel free to reach out to us:</p>
+        <p>Email: support@artportfolio.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Address: 123 Art Street, Creativity City, India</p>
+
+        <h2>Troubleshooting Tips</h2>
+        <div class="troubleshooting">
+            <h3>Issue: Unable to log in</h3>
+            <p>Make sure you are entering the correct username and password. If you have forgotten your password, use the "Forgot Password" option on the login page.</p>
+        </div>
+        <div class="troubleshooting">
+            <h3>Issue: Website not loading properly</h3>
+            <p>Clear your browser's cache and cookies, and ensure you have a stable internet connection. If the issue persists, try accessing the website from a different browser or device.</p>
+        </div>
+        <div class="troubleshooting">
+            <h3>Issue: Problems with uploading artwork</h3>
+            <p>Ensure that the file size and format of the artwork meet our upload requirements. If you continue to experience issues, contact our support team for assistance.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Art Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

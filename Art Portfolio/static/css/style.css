@@ -1,0 +1,378 @@
+
+/* Define CSS Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --white-color: #fff;
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+    --heading-font-size: 2em;
+    --subheading-font-size: 1.5em;
+    --text-font-size: 1em;
+    --border-radius: 10px;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--white-color);
+    font-size: var(--heading-font-size);
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    text-align: center;
+    color: var(--white-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Section Styles */
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: var(--subheading-font-size);
+}
+
+section {
+    margin-bottom: 40px;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Home Page Styles */
+#home-intro {
+    margin-bottom: 20px;
+}
+
+#home-intro img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* Gallery Page Styles */
+#search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#search-bar input {
+    padding: 10px;
+    font-size: var(--text-font-size);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    width: 100%;
+    margin-right: 10px;
+}
+
+#search-bar button {
+    padding: 10px 20px;
+    font-size: var(--text-font-size);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-bar button:hover {
+    background-color: #2980b9;
+}
+
+#art-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.artwork {
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.artwork img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+#rating-comment-section {
+    margin-top: 40px;
+}
+
+#rating-comment-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#rating-comment-section select,
+#rating-comment-section textarea,
+#rating-comment-section button {
+    padding: 10px;
+    font-size: var(--text-font-size);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+#rating-comment-section button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#rating-comment-section button:hover {
+    background-color: #2980b9;
+}
+
+#comments-section {
+    margin-top: 20px;
+}
+
+#comments-section div {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+
+/* Login & Register Page Styles */
+#login-section,
+#register-section {
+    max-width: 500px;
+    margin: auto;
+}
+
+#login-section form,
+#register-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#login-section input,
+#register-section input {
+    padding: 10px;
+    font-size: var(--text-font-size);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+#login-section button,
+#register-section button {
+    padding: 10px 20px;
+    font-size: var(--text-font-size);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#login-section button:hover,
+#register-section button:hover {
+    background-color: #2980b9;
+}
+
+#additional-info,
+#benefits-section,
+#help-section {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#additional-info ul,
+#benefits-section ul {
+    list-style: disc;
+    margin: 20px 0 0 20px;
+}
+
+#help-section p {
+    margin: 0;
+}
+
+/* Contact Page Styles */
+#contact-form,
+#contact-info,
+#map {
+    margin-bottom: 20px;
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    padding: 10px;
+    font-size: var(--text-font-size);
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+#contact-form button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #2980b9;
+}
+
+#map iframe {
+    width: 100%;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Loading Spinner */
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid var(--primary-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success and Error Messages */
+.success-message,
+.error-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInOut 3s ease-in-out;
+}
+
+.success-message {
+    background-color: #2ecc71;
+}
+
+.error-message {
+    background-color: #e74c3c;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    #search-bar input,
+    #search-bar button {
+        font-size: 14px;
+    }
+
+    #contact-form input,
+    #contact-form textarea,
+    #contact-form button {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Art Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Register</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('gallery') }}">Gallery</a>
+            <a href="{{ url_for('help') }}">Help & Support</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="register-section">
+            <h2>Create Your Account</h2>
+            <p>Join our Art Portfolio community by creating an account. Fill out the form below to get started:</p>
+            <form method="post" action="{{ url_for('register') }}">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="{{ url_for('login') }}">Log in here</a>.</p>
+        </section>
+        <section id="benefits-section">
+            <h2>Why Create an Account?</h2>
+            <ul>
+                <li>Access exclusive content and features.</li>
+                <li>Upload and manage your own artwork.</li>
+                <li>Connect with other artists and art enthusiasts.</li>
+                <li>Receive updates and notifications about new artwork and events.</li>
+                <li>Participate in exhibitions and art competitions.</li>
+                <li>Get personalized recommendations and feedback on your artwork.</li>
+            </ul>
+        </section>
+        <section id="help-section">
+            <h2>Need Help?</h2>
+            <p>If you are experiencing issues with registering or need assistance, please visit our <a href="{{ url_for('help') }}">Help & Support</a> page or contact our support team at <a href="mailto:support@artportfolio.com">support@artportfolio.com</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Art Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
